@@ -1,0 +1,676 @@
+python 3 
+-----------------------------
+1.Operator:
+---------------
+ 1.Arithematic operators (=,-,*,%,/)(//->Floor division,**->power operators)
+  2.relational or comparison operators
+   3.logical operators
+   4.bitwise operators
+   5.Assignment operators
+   6.Special operators
+   python===imp
+-----------------
+logical operations
+to use these logical operators to combine comparissions:
+   1.and, or, not ====> keywords
+ example:
+ 2<3 = true
+ 3<2 = false
+ chain comparisions:
+ AND
+ -----
+ 1<2<3<4 ====> true 'here is applied the logical operators'
+ 1<2 and 2<3 ==> true
+ 'h'=='h' and 2==2 ==> true : note :--> here to compare the left and right to are true the boolen value is true, one is not equal to boolen value excute false
+ ----------------------
+ OR:
+ ex: 1==1 or 2==2 ==>true
+     100 ==1 0r 2==2 ==> true  : -> still it showing true because of the give vales either one will be true it will excute true bool values
+	 p
+   
+   
+   ------------------------
+python---->doc
+--------------------------
+1.set data type:
+2.question: in colletcions what is the diff btw set and list ?
+Answers:
+        1.set data type: is used for if you dont what dulplicates and also order
+           2.in set order is not important--> {}
+     2.a list: allow duplicates and insertions order is important,--.[]
+
+imp:
+dictionary
+1.by defalut open curl braces like this is {} = empty dict ex: s={} -->empty dict syntax
+2.create the empty set  ex: s=set() ----> thesre syntax is empty
+ set 
+3.dict having replced the value so it is mutable and also duplicates will be allowed
+----------------------------------------
+list=>[]
+tuple=>()
+dict=>{key:value}
+set=>{}
+what are the fundemental data types in python:
+
+1.int,float,complex,bool,str
+2.bytes is imutable and bytearray is mutable ==>to use bytes and bytearray to represent the binary data
+    ex: like images,videos files and audio files 
+
+3.long data type : python 2 => is available
+                python3 => is not available
+
+4.  character ch='a' ==> not in python , but we can represent char type values only by using string value only
+----------------------------------------------------------------------------------------------------------------------
+
+conditions:
+==============
+To control this flow of logicwe use some keywords:
+if,elif,else statements
+note: Control Flow syntax makes uses of colons and indentations(whitespaces)
+Syantaxs:
+if statements:
+if some_condition:
+  #execute some code
+else:
+   #do something else
+======================
+syntax for if/else staement
+ ----------------------------
+ if some_condition:
+  #execute some code
+ elif some_other_condition:
+  #do some_other_condition
+ else:
+  #do something else
+examples:
+---------------------------
+ hungry = true 
+ if hungry: 
+   print('feed me!')
+output: true
+expinations: here hungry is true the if conditions is true ,then it print the statements
+ --------------------------
+ hungry = true 
+ if hungry: 
+   print('feed me!')
+expinations: here hungry is false the if conditions.
+
+
+else example:___________________________________________________________
+hungry = True
+if hungry :
+  print('feed')
+ else:
+  print('not hungry')
+ 
+ 
+Elif Examples:  --------------------------------------------------
+  location = input('Enter the location:')
+if location ==  'Autoshop':
+    print('cars')
+elif location == 'Bank':
+    print('Money')
+elif location == 'shop':
+    print('welcome')    
+else:
+    print('idont know')
+ex:
+
+    
+x = int(input("Please enter an integer: "))
+if x < 0:
+     x = 0
+     print('Negative changed to zero')
+elif x == 0:
+   print('Zero')
+elif x == 1:
+   print('Single')
+else:
+   print('More')	
+==============================================
+FOR LOOPS
+------------------------------
+imp:
+Many objects in python are "ITERABLE" meaning we can iterate over every element in the object.
+Such as every element in a list or every character in string 
+Use for lopps to execute a block of code for every iteration
+Syntaxs of for loop :
+----------------------------
+my_iterable =[1,2,3,4,5,6,7]
+for iteam_name in my_iterable:
+ print(iteam__namke)
+ ============================
+ examples:
+ ___________________________________________________________
+mylist = [1,2,3,4,5,6,7,8,9,10]
+for num in mylist:
+    #Check for even
+    if num % 2 == 1:
+       print(num)
+    else:
+         print(f'Odd number: {num}')
+    Note:
+     ---------------> means above declare the list values is divided by 2 then reminder will be zero it is even other wise odd number.  
+ example2:
+--------------------------
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+for num in mylist:
+    #Check for even
+    if num % 2 == 1:
+       print(num)
+    else:
+         print(f'Odd number: {num}')
+
+list_sum = 0
+for num in mylist:
+    list_sum = list_sum + num
+    print(list_sum)
+print(list_sum)
+----------------------------------------------------------
+set: An unordered collection of unique values. Items must be hashable.
+a = {1, 2, 'a'}
+dict: An unordered collection of unique key-value pairs; keys must be hashable.
+a = {1: 'one',     2: 'two'}
+b = {'a': [1, 2, 3],     'b': 'a string'}
+====================================================
+set of sets
+---------------
+{{1,2,3,}}, {{4,5,67,8}} ----------> leads to TYPE ERROR: Unhashable Type:set
+instead,use Frozenset
+{frozenset({1,2}), frozenset({3,4})}
+
+
+
+
+
+
+
+
+
+
+----------------------------------
+While loops:
+------------------------
+what is whileloop?
+Answers: 1.While loops are continues to execute a block of code while some condition remains True.
+         2.for example my basket is not full, keep filling my pool with fruits.
+SYntax:whileloop:
+                      while some_boolean_condition:
+					     #do something
+					else:
+                         #do something differnet
+Examples:
+            x = 0
+            while x < 8:
+               print(f'the current value of x is {x}')
+               x = x + 1
+			else:
+                  print('x is not less then ',{x-1},{x==8},{x != 8})
+		
+    
+explinations:
+----------------------------
+1.here declare the x value is 0 
+and then x < 8 
+x = x + 1  or x += 1 ----->intially x =0 and x = 1 ........x = 7
+here x = increasing one  the number by these logic x = x+ 1 then till will be automatically stop when x = 8.
+=========
+=====>main keywords: --> We can use break, continues,pass statements in our loops to add additionals functionallity for various cases. These statements are defined by:
+
+1.break:--> Breaks out of the current closest enclosing loop.
+2.continue:-->goes to the top of the closest enclosing loop.
+3.pass:-->Does nothing at all.
+examples:
+continue:
+---------------------
+mystring = "radhakrishna"
+for letters in mystring:
+    if letters == 'a':
+        continue
+    print(letters)
+break:
+=---------------------------
+	
+	
+============
+mystring = "radhakrishna"
+for letters in mystring:
+    if letters == 'a':
+        break
+    print(letters)
+	======================
+x = 0
+while x < 5:
+    if x == 2 :
+        break
+    print(x)
+    x += 1
+    ==================
+useful Operators:
+=================
+range:
+m = [1,2,3,4]
+for num in list(range(0,10,3)):
+    print(num)
+    ======
+	index:====>
+	
+	index_count = 0
+	word = 'abcdefghigklmnopqrstuvwxyz'
+	for letter in word:
+	      print(word[index_count])
+		  index_count += 1
+=========================================
+enumetared functions:
+word = 'abcdefghigklmnopqrstuvwxyz'
+for index,letter in enumerate(word):
+    print(index)
+	print(letter)
+	print('\n')
+===========================	============================
+ZIP function generators:
+m = [1,2,3,4,5,6]
+n = ['a','b','c','d']
+o = [200,400,500,600,700,800,900]
+for iteam in zip(m,n,o):
+    print(iteam)
+ ======================
+in operatrors:
+ 2 in [1,2,3]
+ min,max operators
+ random library :
+ ===========
+ import random libary
+ from random import shuffle
+ ex:
+ from random import shuffle
+m =[1,2,3,4,5,6,7,8,9]
+shuffle(m)
+print(m)
+=======================
+list comprrehences :
+1. List comprehensions are a unique way of quickly creating list with python.
+2.If you find yourself using a for loop along with .append() to create a list.List Comprehensions are good alternative.
+Ex:
+   my string = 'helo'
+   mylist = [] ===> empty list
+   for letter in mystring:
+    mylist.append(letter)
+	print(mylist)
+	  [OR]
+	  
+mystring = "krishnaradha"
+mylist = [letter for letter in mystring]
+print(mylist)
+[or]
+mylist = [1,23,44,5555,6,6,6]
+m = [num**98 for num in mylist]
+print(m)
+[or]
+celcius = [10,29,73,65,]
+far = [((9/5)*temp +32) for temp in celcius]
+print(far)
+[or]
+celcius = [10,29,73,65,]
+far = []
+for temp in celcius:
+    far.append((9/5)*temp + 32)
+print(far)
+
+ ======================\
+ 
+
+
+results = [x if x%2==0 else 'ODD' for x in range(0,11)]
+print(results)
+=============
+Nested loop :
+ex:
+
+mylist = []
+for x in [2,6,4]:
+    for y in [1,10,100,1000]:
+        mylist.append(x*y)
+print(mylist)   
+[or]
+
+=====> output;  [2, 20, 200, 2000, 6, 60, 600, 6000, 4, 40, 400, 4000]
+        
+mylist = []
+my =[x*y for x in [2,6,4] for y in [1,10,1000]]
+print(my)
+===========================================================================================\
+some examples:
+Quetion:
+1.Use for, .split(), and if to create a Statement that will print out words that start with 's' ?
+Answers:
+#here taking one string ==> 
+st = 'Print only the words of the start with s in the sentences'
+for word in st.split():
+          if word[0] = 's':
+		  print(word)
+#here the given index number in word[0] means s start with the index number of words will be print , 
+it depends upon the index based numbers. 		  
+here fr example in string havingthe Capital S it could not find the words of S .
+by using .lower() -> these function will givies both S and s, words
+
+example:
+st = 'Print only the words Sam,Sunny,Sanju of the start with s in Start,still,stoke,SSAMMMthe sentences'
+for word in st.split():
+          if word[0].lower() == 's': ======> or if word[0] == 's' or word{0] == 'S':
+		   print(word)
+Q:2.Use the Range() to print all the even numbers from 0 to 10
+A:list(range(0,11,2)  =====> output: even numbers
+           or
+list(range(0,11,2))
+for num in range(0,11,2):
+    print(num)
+ 
+ Q:3.Use a List Comprehension to create a list   of all numbers between 1 and 50 that are divisble by 3.
+ A: [x for  x in range(1,51) if x%3 == 0]
+---------------------------------------------------------
+example:
+Q:
+
+ list(range(1,101))
+for num in range(1,101):
+     if num%3 == 0 and num%5 == 0:
+           print('FizzzzzzzzzzBuzzzzzzzzzzz')
+     elif num%3 == 0:
+        print('Fizzzzzz')
+     elif num%5 == 0:
+        print('Buzzzzzzzzzzzzzz')
+     else:
+        print(num)
+ ============================================================
+ methods and functions:
+ 
+ =====================
+ 1.Functions:Allows us to create blocks of code that can be easily executed many times, without needing to constantly rewrite the entire blockof code.
+ ---------------------------------------
+ SYNTAX:
+ def name_of_function():
+   '''
+    Docstring explination Functions
+	'''
+	print('Hello')
+1.it sis actuall docstring as a string ,it provided  genetral informations about functions 
+2.	
+	-----------------------------------------
+	Note: name of the functions is always small characters.
+ANOTHER SYNTAX:
+   def name_of_function(name):
+     '''
+        doc string explainations functions
+      ''''
+     print('hello'+name)
+	========================
+---->Typically we are use the '''return''' key words to send back the results of the functons,instead of just printing it out.
+IMPORTANT:-> return allows us to assing the output of the  functions to a new variable.
+ 	        ex:
+			def add_functions(num1,num2):
+			  return num1+num2
+			  ==========================
+		>>>>>result =  add_funtion(2,3)
+		      print(rersult)
+			  >>>5
+=============================> ex:
+def say_hi(name):
+    return 'hello'+name
+result = say_hi('kkk')
+print(result)			  
+=========================
+#find our if the word "dog' is in aa string ?\
+ex:
+def m_check(str):
+	if 'dog' in str.lower():
+		return True
+	else:
+		return False
+result = m_check('Dog is ee')
+print(result)
+ or
+ simple code is
+---------------------
+def m_check(str):
+    return 'dog' in str.lower()  #### hrere the retun key is use for booleamn value instead of giving else and if conditions simply we can write return '' in ''
+result = m_check('dog is barking')
+print(result)
+=================================================================================================
+PIG TATIN
+---------------
+rules:
+-----------
+1.if the word start with vowels , add 'ay' to end 
+2.if word does not start with a vowel , put first letter at the end then ad 'ay'
+ 
+ word -> ordway
+ex:apple-->appleay
+-------------------------------------
+EX:
+ def pig_lantin(word)     #here def is keyword and pig_latin is the name of the function itself, (word)-> passing argument 
+ ##logic apply
+ PROGRAMM:
+def latin(word):
+    first = word[0]  #####
+    if first in 'aeiou':                ###--. logic apply
+        letter = word + 'ay'
+    else: letter = word[1:] + first + 'ay' ###
+    return letter
+r = latin('jasmokin')
+print(r)
+=============================
+ex:
+
+def p(w):
+      fi = w[2]
+      if fi in 'aretgyl':
+          pw =  w + 'jaffa'
+      else:
+          pw = w[1:] + fi + 'jaffa'
+      return pw
+r = p('gthyte')
+print(r)
+___________________________________________________________
+------>>
+def myfunc(a):
+    
+    if a == True:
+        
+        return 'Hello'
+        
+    elif a == False:
+        
+        return 'Goodbye'
+
+r = myfunc(True)
+print(r)
+----------------------------------
+def m(x,y,z):
+    if z == True:
+        return x
+    else:
+        return y
+r = m('Hello','bye',False)
+print(r)
+----------------------------------------------------
+def m(a,b):
+    return a*b
+r = m(33,990)
+print(r)
+-------------------------------------
+def even(n):
+    if n%4 == 0:
+        return True
+        print(even)
+    else:
+        return False
+        print(odd)
+r = even(40)
+print(r)
+========================
+*arsg and *kwargs in python
+1.args-.Arguments and **kwargs ---> keyword arguments
+steps:
+1.create a function === def my_func(a,b) ---> it having two numbers 
+   ### Returns 5% of sum of a and b 
+    return sum((a,b)) *0.05    ---->(a,b) is a tuple value passing
+	r -= my_func(40,60) ---> 40 is first assigment arguments of a and 60 is argument of b
+	
+	
+programm:
+----------------------
+def my_func(a,b):
+    #return 5% of the sum of a and b
+    return sum((a,b))*0.05
+r = my_func(40,60)
+print(r)
+-------------------------------
+scinario:
+if i want mutiple argumrents declared 
+ex:
+def my_func(a,b,c=0,d=0,e=0):
+    #return 5% of the sum of a and b
+    return sum((a,b,c,d,e))*0.05
+r = my_func(40,60,100,78)
+print(r)
+---------------------------
+########keyword *arg is written in tuple############
+*args :-----> no need to declared the arguments,instead of that one we are using *args to allow multiple arguments
+ def myfunc(*args):
+    return sum(args) * 0.085
+r = myfunc(10,21,45,457,8765,89566,8962,555658,595658,74946,66,65,685626,1454,4,856,556,)
+print(r)
+  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ **kwargs ----> written in dictionary
+	 def f(**kwargs):
+    print(kwargs)
+    if 'fruit' in kwargs:
+        print('my fruit of choice is {}'.format( kwargs['fruit'])) #.format calls keyword arguments in the form of dictionary 
+    else:
+        print('i did not find any fruits here')
+r = f(fruit='apple', veggie = 'lettuce')
+print(r)
+================----------------------=-=-=-====
+*args and **kwargs
+ex:
+def f(*args,**kwargs):
+    print(args)
+    print(kwargs)
+    print(' I would like {} {}'.format(args[2],kwargs['fruit']))
+r = f(10,20,30,fruit = 'orange', food ='eggs', animal ='dog')
+print(r)
+_+_+_++_+_+_==-===
+==-=-==--=====================----==============-==-=-=-==-====-=-=-=-
+these ex is return in list
+def myfunc(*args):
+    return [n for n in args if n%2 == 0]
+r = myfunc(5,6,7,8)
+print(r)
+
+=---=-==-=-=-==-==-====================----==-
+Q: skyline:
+Matching the string whwre every even letters is uppercase, and every odd letters in lower cases. print out
+def myfunc(mystr):
+    
+    output = ''
+    
+    for item in range(len(mystr)):
+        
+        if item%2==0:
+            
+            output += mystr[item].lower()
+    
+        else:
+            
+            output += mystr[item].upper()
+            
+        
+    return output   
+r = myfunc('krishna is a super Star')
+print(r)
+====--------------================------------=====================
+fUNCTION pRACTICE eXCERCISES:
+---------------------------------------
+def lesser_of_two_even(a,b):
+     if a%2 ==0 and b%2 ==0:
+         if a < b:
+             result = a
+         else:
+             result = b
+     else:
+         if a > b:
+             result = a
+         else:
+             result = b
+     return result
+m = lesser_of_two_even(233,40)
+print(m)
+
+[or]
+def less(a,b):
+    if a%2 ==0 and b%2 == 0:
+        result = min(a,b)
+    else:
+        result = max(a,b)
+    return result
+    max(10,200)
+m = less(2,56)
+print(m)
+=================================--00-------------------0000000--------------------=======-
+
+LAMABDA EXPRESSIONS MAPS AND FILTERS: Date: --> 02/05/2019
+----------------------------------------------------
+1.map --> Init signature:map(self, /, *args,**kwargs
+2.synatax: map(func,*iterables) --> map object
+3.Make an iteration that functions using arguments from each of the iterable.
+4.stops when the shortest iterable is exhausted
+5.LAMABDA is use d to quickly created function know as anonymous function.
+6.NOTE: Basicallly just one time use the function that you don't even really name you just them one time and nerver refferance them again
+
+ex:
+1. map funnction:
+2.filter function
+3.lambada function:
+1.map
+___________________________________________________________
+
+def square(num):
+    return num**3
+my_num = [1,2,3,4,5,6,7,8,9]
+map(square,my_num)
+for item in map(square,my_num):
+    print(item)
+List = list(map(square,my_num))  ## the formate having he list to decalre these method
+
+print(List)
+=====output:
+
+1
+8
+27
+64
+125
+216
+343
+512
+729
+[1, 8, 27, 64, 125, 216, 343, 512, 729]
+=========================------------------------===========
+Ex:map function in strings:
+	
+	
+    
+
+ 
+	
+	
+	
+	
+	
+ 
+
+						 
+
+
